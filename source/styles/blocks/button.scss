@@ -1,0 +1,41 @@
+.button {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  border: none;
+  color: $color-white;
+  background-color: $color-base-primary;
+  padding: 8px 20px;
+  line-height: 24px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  cursor: pointer;
+
+  &--light {
+    background-color: $color-white;
+    color: $color-base-primary;
+    min-width: 40px;
+    padding: 8px 16px;
+
+    &:disabled {
+      background-color: $color-grey-light;
+      color: $color-white;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $color-primary-lighter;
+    color: $color-white;
+    outline: none;
+  }
+
+  &:active {
+    background-color: $color-primary-darker;
+    color: $color-white;
+  }
+
+  &:disabled {
+    background-color: $color-base-grey;
+  }
+}

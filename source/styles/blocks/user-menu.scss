@@ -1,0 +1,45 @@
+.user-menu {
+  display: flex;
+  align-items: center;
+
+  @media (min-width: $desktop-width) {
+    gap: 25px;
+  }
+}
+
+.user-menu__link {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  color: $color-black;
+  height: 16px;
+  padding: 22px;
+
+  &:hover,
+  &:focus {
+    color: $color-base-primary;
+    stroke: $color-base-primary;
+    outline: none;
+  }
+
+  &:active {
+    color: $color-base-primary;
+    background-color: $color-base-secondary;
+    stroke: $color-base-primary;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 25px;
+    padding-bottom: 30px;
+    text-transform: uppercase;
+  }
+}
+
+.user-menu__description {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: inline-block;
+    margin: auto 0;
+  }
+}

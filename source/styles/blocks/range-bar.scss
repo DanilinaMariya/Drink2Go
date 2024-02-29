@@ -1,0 +1,67 @@
+.range-bar,
+.noUi-base {
+  width: 260px;
+  transform: translateX(5px);
+  height: 2px;
+  background-color: $color-grey-light;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+
+  @media (min-width: $tablet-width) {
+    width: 200px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 305px;
+  }
+}
+
+
+.noUi-horizontal .noUi-handle {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: $color-white;
+  border: 2px solid $color-primary-lighter;
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    display: none;
+  }
+
+  &--lover {
+    left: 0;
+  }
+
+  &--max {
+    right: 0;
+  }
+
+  &:hover::after,
+  &:focus::after {
+    display: block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    margin: -4px -15px;
+    background-color: $color-primary-opasiti;
+    content: "";
+  }
+
+  &:active {
+    border-color: $color-base-primary;
+
+    &::after {
+      background-color: $color-base-primary;
+    }
+  }
+}
+
+.noUi-connect {
+  background-color: $color-base-primary;
+}

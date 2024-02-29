@@ -1,0 +1,123 @@
+.slider {
+  position: relative;
+  width: 320px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    width: 768px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1440px;
+  }
+}
+
+.slider__list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slider__item {
+  display: none;
+
+  &--activ {
+    display: block;
+
+    @media (min-width: $desktop-width) {
+      display: flex;
+    }
+  }
+}
+
+.slider__button {
+  position: absolute;
+  top: 0;
+  width: 20px;
+  height: 100%;
+  border: none;
+  z-index: 20;
+  background-color: transparent;
+  cursor: pointer;
+  fill: $color-base-primary;
+
+  &--previous {
+    left: 0;
+
+    &:not(:disabled):hover {
+      background: linear-gradient(90deg, $color-white 0%, rgba(255, 255, 255, 0) 100%);
+    }
+
+    &:not(:disabled):focus {
+      background: linear-gradient(90deg, $color-primary-opasiti 0%, rgba(120, 89, 207, 0) 100%);
+      outline: none;
+    }
+  }
+
+  &--next {
+    right: 0;
+
+    &:not(:disabled):hover {
+      background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, $color-white 100%);
+    }
+
+    &:not(:disabled):focus {
+      background: linear-gradient(90deg, rgba(120, 89, 207, 0) 0%, $color-primary-opasiti 100%);
+      outline: none;
+    }
+  }
+
+  &:disabled {
+    cursor: auto;
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 80px;
+  }
+}
+
+.slider__button:disabled .slider__icon {
+  fill: $color-base-grey;
+}
+
+.slider__steps-wrapper {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    position: absolute;
+    bottom: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 20;
+    gap: 8px;
+  }
+}
+
+.slider__step {
+  width: 62px;
+  height: 4px;
+  border: none;
+  background-color: $color-white;
+
+  &:hover,
+  &:focus {
+    background-color: $color-primary-opasiti;
+    outline: none;
+  }
+
+  &--activ,
+  &:active {
+    background-color: $color-base-primary;
+  }
+}
+
+.slider__icon {
+  @media (min-width: $tablet-width) and (max-width: 1439px) {
+    position: absolute;
+    left: 50%;
+    top: 37%;
+  }
+}

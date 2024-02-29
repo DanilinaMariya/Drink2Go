@@ -1,5 +1,69 @@
 .header {
-  background-color: #663399;
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 12px;
   color: #ffffff;
-  padding: 10px 15px;
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 320px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  justify-content: space-between;
+
+  @media (min-width: $tablet-width) {
+    width: 768px;
+    padding-right: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1440px;
+    padding: 0 40px;
+  }
+}
+
+.header__nav {
+  @media (max-width: 767px) {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 60px;
+    z-index: 40;
+
+    &--closed {
+      display: none;
+    }
+
+    &--opened {
+      display: block;
+    }
+  }
+}
+
+.header__toggle {
+  display: none;
+
+  @media (max-width: 767px) {
+    display: block;
+    width: 16px;
+    height: 16px;
+    padding: 30px;
+    border: none;
+    background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 16px;
+    background-image: url("../../images/menu.svg");
+    cursor: pointer;
+
+    &--opened {
+      background-image: url("../../images/menu-close.svg");
+    }
+
+    &:active {
+      background-color: $color-base-secondary;
+    }
+  }
 }

@@ -1,0 +1,45 @@
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: end;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: $tablet-width) {
+    max-width: 340px;
+  }
+
+  @media (min-width: $desktop-width) {
+    justify-content: start;
+  }
+}
+
+.socials__link {
+  display: block;
+  padding: 10px;
+  border-radius: 4px;
+  text-decoration: none;
+  color: $color-black;
+}
+
+.socials__icon {
+  fill: $color-base-grey;
+}
+
+.socials__link:hover,
+.socials__link:focus {
+  background-color: $color-base-secondary;
+  outline: none;
+}
+
+.socials__link:active {
+  background-color: $color-primary-opasiti;
+}
+
+.socials__link:hover .socials__icon,
+.socials__link:focus .socials__icon,
+.socials__link:active .socials__icon {
+  fill: $color-base-primary;
+}

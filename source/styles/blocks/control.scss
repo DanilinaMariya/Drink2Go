@@ -1,0 +1,26 @@
+.control {
+  display: flex;
+  gap: 8px;
+
+  @media (min-width: $tablet-width) {
+    gap: 4px;
+    justify-content: end;
+  }
+}
+
+.control__text {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.control__item {
+  border: none;
+  background-color: transparent;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  color: $color-base-primary;
+  text-align: center;
+}

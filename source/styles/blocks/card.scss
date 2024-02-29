@@ -1,0 +1,137 @@
+.card {
+  padding: 20px;
+  padding-bottom: 60px;
+  box-sizing: border-box;
+  height: 100%;
+
+  &--flat {
+    background-color: $background-flat;
+  }
+
+  &--latte {
+    background-color: $background-latte;
+  }
+
+  &--espresso {
+    background-color: $background-espresso;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: 1439px) {
+    padding: 60px 80px 500px;
+    height: 100%;
+
+    &--flat {
+      background: linear-gradient(180deg, $background-flat 77%, $color-white 77%);
+    }
+
+    &--latte {
+      background: linear-gradient(180deg, $background-latte 77%, $color-white 77%);
+    }
+
+    &--espresso {
+      background: linear-gradient(180deg, $background-espresso 77%, $color-white 77%);
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 30px 80px 75px 105px;
+    flex-direction: row;
+  }
+}
+
+.card-wrapper {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-left: 30px;
+    padding-top: 150px;
+    align-items: start;
+  }
+}
+
+.card__image {
+  padding: 0;
+  display: flex;
+  margin: 0 auto;
+  padding-bottom: 10px;
+
+  @media (min-width: $tablet-width) and (max-width: 1439px) {
+    padding-bottom: 4px;
+    position: absolute;
+    bottom: 0;
+    left: 146px;
+  }
+}
+
+.card__badge {
+  margin: 0;
+  text-align: center;
+}
+
+.card__title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 48px;
+  margin: 0;
+  padding: 4px 0 10px;
+  text-align: center;
+  letter-spacing: 0.7px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 56px;
+    line-height: 80px;
+    padding-bottom: 16px;
+    letter-spacing: 1px;
+  }
+}
+
+.card__description {
+  text-align: center;
+  margin: 0;
+  line-height: 20px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: start;
+  }
+}
+
+.card__prise {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px 25px 0;
+  align-items: baseline;
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+    padding-top: 40px;
+  }
+}
+
+.card__button {
+  margin-left: 20px;
+}
+
+.card__old-price {
+  font-size: 16px;
+  text-decoration-line: line-through;
+  color: $color-base-primary;
+  padding-right: 6px;
+  line-height: 32px;
+}
+
+.card__new-price {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 32px;
+}

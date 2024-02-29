@@ -1,0 +1,63 @@
+.filter-milk {
+  position: relative;
+  padding-left: 34px;
+}
+
+.filter-milk__radio {
+  position: absolute;
+  left: 0;
+  top: -1px;
+  display: block;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid $color-base-grey;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.filter-milk__item[type="radio"]:not(:disabled):hover + .filter-milk__radio,
+.filter-milk__item[type="radio"]:not(:disabled):focus + .filter-milk__radio {
+  border-color: $color-primary-lighter;
+  outline: none;
+
+  &::before {
+    display: block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    margin: 4px;
+    background-color: $color-primary-opasiti;
+    content: "";
+  }
+}
+
+.filter-milk__item[type="radio"]:checked + .filter-milk__radio {
+  border-color: $color-base-primary;
+
+  &::before {
+    display: block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    margin: 4px;
+    background-color: $color-base-primary;
+    content: "";
+  }
+}
+
+.filter-milk__item:disabled ~ .filter-milk__radio {
+  border-color: $color-grey-light;
+}
+
+.filter-milk__item:disabled ~ .filter-milk__text {
+  color: $color-base-grey;
+}
+
+.filter-milk__item[type="radio"]:checked:disabled + .filter-milk__radio {
+  border-color: $color-grey-light;
+
+  &::before {
+    background-color: $color-grey-light;
+  }
+}

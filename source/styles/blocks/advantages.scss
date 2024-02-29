@@ -1,0 +1,61 @@
+.advantages {
+  padding: 50px 20px 60px;
+  width: 320px;
+  box-sizing: border-box;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    width: 768px;
+    padding: 57px 30px 100px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1440px;
+    padding: 100px 40px 120px;
+  }
+}
+
+.advantages__title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 36px;
+  margin: 0;
+  text-align: center;
+  padding-top: 4px;
+  padding-bottom: 36px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 42px;
+    line-height: 64px;
+    padding-bottom: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 80px;
+  }
+}
+
+.advantages__list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 32px;
+  text-align: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: $tablet-width) and (max-width: 1439px) {
+    display: grid;
+    text-align: start;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    gap: 50px 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+    gap: 30px;
+    justify-content: center;
+  }
+}
